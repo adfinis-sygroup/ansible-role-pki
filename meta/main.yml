@@ -3,6 +3,7 @@
 dependencies: []
 
 galaxy_info:
+  role_name: 'pki'
   author: 'Adfinis SyGroup AG'
   description: 'Install and manage PKI packages and helpers'
   company: 'Adfinis SyGroup AG'
