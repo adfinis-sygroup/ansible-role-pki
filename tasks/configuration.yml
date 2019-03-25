@@ -23,7 +23,7 @@
     selevel: s0
 
 - name: create snakeoil certificate
-  command: 'openssl req -x509 -sha256 -nodes -newkey rsa:4096 -keyout {{ pki_snakeoil.pkey }} -days 3650 -out {{ pki_snakeoil.cert }} -subj "/CN={{ ansible_fqdn }}"'
+  command: 'openssl req -x509 -sha256 -nodes -newkey rsa:4096 -keyout {{ pki_snakeoil.pkey }} -days 3650 -out {{ pki_snakeoil.cert }} -subj "/CN={{ ansible_fqdn }}"' # noqa 204
   when: not pki_register_snakeoil_pkey.stat.exists or
         not pki_register_snakeoil_cert.stat.exists
 
